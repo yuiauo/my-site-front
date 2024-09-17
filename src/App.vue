@@ -3,8 +3,11 @@ import JobDescription from './components/JobDescription.vue'
 </script>
 
 <template>
-  <div class="cursor"></div>
+  <div class="cursor" :v-if="leaveMouse"></div>
+  <div class="cursor-small"></div>
   <div id="app">
+    <JobDescription position-id=""/>
+    <br />
     <JobDescription position-id=""/>
   </div>
 </template>
@@ -31,7 +34,16 @@ header {
     height: 20px;
     width: 20px;
     background-color: yellow;
-    opacity: 0.3;
+    opacity: 0.4;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .cursor-small {
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    background-color: black;
     border-radius: 50%;
     transform: translate(-50%, -50%);
   }

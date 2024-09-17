@@ -1,10 +1,11 @@
 <template>
   <v-container fluid class="description-container">
-    <v-row>
-      <v-col>
-        <h2 class="description-title">
-          {{ this.title.toUpperCase() }}
-        </h2>
+    <v-row align-content="space-around">
+      <v-col cols="12" class="description-title">
+        {{ this.title.toUpperCase() }}
+      </v-col>
+      <v-col cols="12" class="logo" justify="start">
+        <img src="@/static/sber-cropped.svg" class="img-class">
       </v-col>
     </v-row>
     <v-row>
@@ -64,16 +65,17 @@ export default {
 
 <style scoped>
 .description-container {
-  border: #181818 5px solid;
+  border: #181818 10px solid;
   border-radius: 20px;
-  width: 700px;
+  width: 800px;
   height: 200px;
 }
 .description-title {
   font-weight: bold;
+  padding: 10px;
   color: #181818;
   font-family: "Fascinate", serif;
-  font-size: 40px;
+  font-size: 34px;
   margin-left: 15px;
 }
 .description-date {
@@ -85,5 +87,11 @@ export default {
   color: #181818;
   margin-left: 15px;
   font-family: monospace, serif;
+}
+.img-class {
+  height: 30px;
+}
+.logo {
+  padding: 100px;
 }
 </style>
